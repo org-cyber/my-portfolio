@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+
+nav {
+    display: flex;
+    color: white;
+}
+
+.nav-links {
+    margin-left: 400px;
+    display: flex;
+    gap: 20px;
+
+}
+
+.btn2 {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe44;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn2::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 6px);
+    height: calc(100% + 2px);
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+    border-radius: 10px;
+}
+
+.btn2::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+
+.btn2:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+}
+
+.btn2:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+}
+
+.btn2:hover {
+    border: 2px solid #fefefe36;
+}
+
+.btn2 .spn2 {
+    position: relative;
+    z-index: 3;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+
+.herosec {
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+/*skills section*/
+/* From Uiverse.io by codebykay101 */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+
+.container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+}
