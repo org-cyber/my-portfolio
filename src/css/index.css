@@ -1,9 +1,34 @@
+/* 1. Default Styles (Desktop / Large Screens) */
 body {
   margin: 0;
   min-height: 100vh;
+  /* Standard viewport height */
+
+  /* Ensure the path starts with '/' for public folder access */
   background-image: url("/flat-lay-workstation-with-copy-space-laptop.jpg");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* Fixed is great for desktop parallax effects */
   background-attachment: fixed;
+}
+
+/* 2. Mobile Overrides (Tablets & Phones < 768px) */
+@media (max-width: 768px) {
+  body {
+    /* CRITICAL FIX: Switch to 'scroll' on mobile.
+       'fixed' causes performance issues and jitter on iOS/Android. */
+    background-attachment: scroll;
+
+    /* OPTIONAL: Adjust position for portrait screens.
+       Since your image is wide (landscape), 'center' might cut off the laptop.
+       Change this to 'right center' or '70% center' to show more of the right side. */
+    background-position: center center;
+
+    /* Modern Mobile Fix: Prevents the background from resizing 
+       when the mobile address bar disappears */
+    min-height: 100dvh;
+  }
 }
