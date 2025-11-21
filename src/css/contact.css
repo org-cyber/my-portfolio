@@ -1,106 +1,133 @@
- .social-login-icons {
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
-     margin-left: 600px;
-     margin-top: 100px;
-     margin-bottom: 100px;
- }
+.social-login-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+    /* Original Desktop styles */
+    margin-left: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 
- .social-login-icons svg {
-     width: 40px;
- }
+.social-login-icons svg {
+    width: 40px;
+}
 
- .social-icon-1,
- .social-icon-1-1,
- .social-icon-2,
- .social-icon-2-2,
- .social-icon-3,
- .social-icon-3-3,
- .social-icon-4,
- .social-icon-4-4 {
-     width: 50px;
-     height: 50px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     border-radius: 50px;
-     margin: 20px 0 0px 0;
- }
+.social-icon-1,
+.social-icon-1-1,
+.social-icon-2,
+.social-icon-2-2,
+.social-icon-3,
+.social-icon-3-3,
+.social-icon-4,
+.social-icon-4-4 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 20px 0 0px 0;
+}
 
- .icon svg {
-     fill: #111;
- }
+.icon svg {
+    fill: #111;
+}
 
- .socialcontainer {
-     height: 80px;
-     overflow: hidden;
- }
+.socialcontainer {
+    height: 80px;
+    overflow: hidden;
+}
 
- .social-icon-1 {
-     transition-duration: 0.4s;
-     background-color: rgb(0, 0, 0);
-     transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
- }
+.social-icon-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+}
 
- .social-icon-1 svg,
- .social-icon-2 svg,
- .social-icon-3 svg,
- .social-icon-4 svg {
-     opacity: 0;
-     transition-duration: 0.5s;
-     transition-delay: 0.2s;
- }
+.social-icon-1 svg,
+.social-icon-2 svg,
+.social-icon-3 svg,
+.social-icon-4 svg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
 
- .social-icon-1-1 {
-     transition-duration: 0.4s;
-     background-color: rgb(0, 0, 0, 0);
- }
+.social-icon-1-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0, 0);
+}
 
- .socialcontainer:hover .social-icon-1 {
-     transform: translateY(-70px);
- }
+.socialcontainer:hover .social-icon-1 {
+    transform: translateY(-70px);
+}
 
- .socialcontainer:hover .social-icon-1 svg,
- .socialcontainer:hover .social-icon-2 svg,
- .socialcontainer:hover .social-icon-3 svg,
- .socialcontainer:hover .social-icon-4 svg {
-     opacity: 1;
- }
+.socialcontainer:hover .social-icon-1 svg,
+.socialcontainer:hover .social-icon-2 svg,
+.socialcontainer:hover .social-icon-3 svg,
+.socialcontainer:hover .social-icon-4 svg {
+    opacity: 1;
+}
 
- .social-icon-2 {
-     transition-duration: 0.4s;
-     transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
-     background: linear-gradient(72.44deg,
-             #ff7a00 11.92%,
-             #ff0169 51.56%,
-             #d300c5 85.69%);
- }
+.social-icon-2 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: linear-gradient(72.44deg,
+            #ff7a00 11.92%,
+            #ff0169 51.56%,
+            #d300c5 85.69%);
+}
 
- .socialcontainer:hover .social-icon-2 {
-     transform: translateY(-70px);
- }
+.socialcontainer:hover .social-icon-2 {
+    transform: translateY(-70px);
+}
 
- .social-icon-3 {
-     transition-duration: 0.4s;
-     transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
-     background: #316ff6;
- }
+.social-icon-3 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: #316ff6;
+}
 
- .socialcontainer:hover .social-icon-3 {
-     transform: translateY(-70px);
- }
+.socialcontainer:hover .social-icon-3 {
+    transform: translateY(-70px);
+}
 
- .social-icon-4 {
-     transition-duration: 0.4s;
-     transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+.social-icon-4 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
 
-     background: linear-gradient(180deg,
-             rgba(129, 34, 144, 1) 0%,
-             rgba(77, 34, 124, 1) 91%);
- }
+    background: linear-gradient(180deg,
+            rgba(129, 34, 144, 1) 0%,
+            rgba(77, 34, 124, 1) 91%);
+}
 
- .socialcontainer:hover .social-icon-4 {
-     transform: translateY(-70px);
- }
+.socialcontainer:hover .social-icon-4 {
+    transform: translateY(-70px);
+}
+
+/* ========================================= */
+/* 📱 MOBILE RESPONSIVENESS FIXES            */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    .social-login-icons {
+        margin-left: 0;
+        /* Remove huge margin */
+        margin-top: 50px;
+        /* Reduce vertical spacing */
+        margin-bottom: 50px;
+
+        /* Center horizontally */
+        justify-content: center;
+        width: 100%;
+
+        /* Allow wrap if too many icons */
+        flex-wrap: wrap;
+    }
+
+    /* Ensure icons don't break layout on very small screens */
+    .socialcontainer {
+        margin: 5px;
+    }
+}

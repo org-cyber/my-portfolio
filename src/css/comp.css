@@ -1,32 +1,23 @@
 html {
-    /* * LEAD ARCHITECT NOTE: This enables smooth scrolling 
-     * when using anchor links (e.g., href="#skills").
-     */
     scroll-behavior: smooth;
 }
 
 @import "tailwindcss";
 
-
-
-
 nav {
     display: flex;
     color: white;
     align-items: center;
-    /* Centers items vertically */
     padding: 20px;
-    /* Added padding for breathing room */
 }
 
 .nav-links {
-    /* CHANGED: Removed hard 400px margin. Use Flexbox to push it to the right instead. */
     margin-left: auto;
     display: flex;
     gap: 20px;
 }
 
-/* Button Styles */
+/* Button Styles (Keep existing) */
 .btn2 {
     position: relative;
     display: inline-block;
@@ -43,6 +34,7 @@ nav {
     border-radius: 10px;
 }
 
+/* ... (Keep .btn2::before, ::after, :hover styles unchanged) ... */
 .btn2::before {
     content: "";
     position: absolute;
@@ -93,7 +85,6 @@ nav {
 }
 
 .herosec {
-    /* CHANGED: Lowered to a safe default, handled better in media query below */
     margin-left: 50px;
     margin-top: 50px;
     display: flex;
@@ -111,7 +102,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Added padding to prevent cutting off on small screens */
     padding: 50px 0;
 }
 
@@ -128,7 +118,6 @@ nav {
     transition: 0.5s;
     border-radius: 10px;
     margin: 0 -45px;
-    /* The overlap effect */
     backdrop-filter: blur(10px);
     transform: rotate(calc(var(--r) * 1deg));
 }
@@ -156,71 +145,7 @@ nav {
     fill: #fff;
 }
 
-/* ========================================= */
-/* 📱 MOBILE RESPONSIVENESS (The Fix)       */
-/* ========================================= */
-
-@media (max-width: 768px) {
-
-    /* 1. Navbar: Stack vertical */
-    nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px;
-    }
-
-    .nav-links {
-        margin-left: 0;
-        /* Reset the huge margin */
-        justify-content: center;
-        flex-wrap: wrap;
-        /* Allow links to wrap if needed */
-        width: 100%;
-    }
-
-    /* 2. Hero Section: Remove left margin */
-    .herosec {
-        margin-left: 0;
-        padding: 20px;
-        /* Add padding so text doesn't touch edge */
-        text-align: center;
-        /* Center text for mobile look */
-        width: 100%;
-    }
-
-    /* 3. Skills Container: Stack cards vertically */
-    .container {
-        flex-direction: column;
-        /* Stack top to bottom */
-        gap: 20px;
-    }
-
-    .container .glass {
-        margin: 0;
-        /* Remove negative margin (overlap) */
-        transform: rotate(0deg) !important;
-        /* Force cards straight */
-        width: 90%;
-        /* Make cards wider on phone */
-        max-width: 300px;
-    }
-
-    /* Remove the hover effect requirement on mobile since we can't hover */
-    .container .glass {
-        margin: 0 0 20px 0;
-    }
-
-    /* 4. Button: Scale down slightly */
-    .btn2 {
-        font-size: 16px;
-        padding: 12px 24px;
-    }
-}
-
-
-
-
-/*techstack*/
+/* Tech Stack Section (from snippet) */
 .sk {
     width: 1000px;
     display: flex;
@@ -239,6 +164,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
+    /* Added spacing for wrap */
 }
 
 .sk .btn a {
@@ -301,10 +228,7 @@ nav {
     transition-delay: 0.5;
 }
 
-.sk .btn:hover::before
-
-/*lightup button*/
-    {
+.sk .btn:hover::before {
     bottom: 0;
     height: 50%;
     width: 80%;
@@ -325,12 +249,91 @@ nav {
     transition-delay: 0.5;
 }
 
-.sk .btn:hover::after
-
-/*lightup button*/
-    {
+.sk .btn:hover::after {
     top: 0;
     height: 50%;
     width: 80%;
     border-radius: 30px;
+}
+
+/* ========================================= */
+/* 📱 MOBILE RESPONSIVENESS FIXES            */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. Navigation */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* 2. Hero Section */
+    .herosec {
+        margin-left: 0;
+        margin-top: 20px;
+        flex-direction: column;
+        /* Stack content */
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero_img {
+        margin-left: 0;
+        /* Remove the huge margin */
+        margin-top: 30px;
+        width: 80%;
+        /* Responsive width */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    /* 3. Skills Container */
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container .glass {
+        margin: 0;
+        transform: rotate(0deg) !important;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .container .glass {
+        margin: 0 0 20px 0;
+    }
+
+    .btn2 {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    /* 4. Tech Stack (.sk) */
+    .sk {
+        width: 100%;
+        /* Full width */
+        margin-left: 0;
+        /* Remove margin */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .sk .btn {
+        width: 90%;
+        /* Buttons take full width on phone */
+        max-width: 300px;
+    }
 }

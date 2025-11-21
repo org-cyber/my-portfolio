@@ -1,8 +1,10 @@
 .gensk {
     display: flex;
+    /* ADDED: Allow wrapping for responsiveness */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center items when wrapped */
 }
-
-
 
 .card {
     padding: 20px;
@@ -20,6 +22,8 @@
     position: relative;
     overflow: hidden;
 }
+
+/* ... (Rest of your original CSS remains unchanged) ... */
 
 .card::before {
     content: '';
@@ -172,4 +176,37 @@ button:hover::before {
 
 button:hover::after {
     transform: translate(50%, 0) scale(1.1);
+}
+
+/* ========================================= */
+/* 📱 MOBILE RESPONSIVENESS FIXES            */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    .gensk {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items */
+        width: 100%;
+        /* Full width */
+        margin: 0;
+        /* Reset any default margins */
+        gap: 30px;
+        /* Add space between stacked cards */
+    }
+
+    .card {
+        margin-left: 0;
+        /* Remove the large desktop margin */
+        width: 90%;
+        /* Make card fit screen width with padding */
+        max-width: 350px;
+        /* Keep max width reasonable */
+    }
+
+    .card:hover {
+        translate: 0 -10px;
+        /* Reduce hover movement on mobile */
+    }
 }
