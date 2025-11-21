@@ -1,11 +1,36 @@
-export default function About() {
+
+import "../css/about.css";
+import { forwardRef } from 'react';
+
+
+
+
+const About = forwardRef((props, ref) => {
     return (
-        <section id="about" className="about">
-            <h2>About Me</h2>
-            <p>
-                I’m a developer who builds modern, scalable and secure applications.
-                I enjoy React, web security, and blockchain development.
-            </p>
-        </section>
+        <>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <div className="boun" ref={ref}>
+                <div className="hole">
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                    <i />
+                </div>
+            </div>
+            <br></br>
+        </>
     );
-}
+});
+
+export default About;
+

@@ -1,11 +1,12 @@
+import React, { forwardRef } from 'react';
 import '../css/comp.css'
 
-export default function Hero() {
+const Hero = forwardRef((props, ref) => {
     return (
         <>
             <br></br>
-            <br></br>
-            <section className="herosec">
+
+            <section ref={ref} className="herosec">
                 <div className="w-[400px] h-[400px] relative border border-solid border-white/40 rounded-2xl overflow-hidden">
                     <div className="w-full h-full p-1 absolute bg-grey-400">
                         <div className="w-full h-full rounded-xl rounded-tr-[100px] rounded-br-[40px] bg-[#222]" />
@@ -39,8 +40,13 @@ export default function Hero() {
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+
             </section>
         </>
     );
-}
+});
+
+export default Hero;
